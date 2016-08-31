@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <head>
+        <title>Mon projet canvas</title>
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script src="/client/js/arrayIndexOf.js"></script>
+        <script src="/client/js/canvas.js"></script>
+		 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <img style="display: none;" src="client/img/mur-gauche.png" />
+     <img style="display: none;" src="client/img/mur-droite.png" />
+     <img style="display: none;" src="client/img/mur-haut.png" />
+     <img style="display: none;" src="client/img/mur-bas.png" />
+     <img style="display: none;" src="client/img/mur-coinBD.png" />
+     <img style="display: none;" src="client/img/mur-coinBG.png" />
+     <img style="display: none;" src="client/img/mur-coinHD.png" />
+     <img style="display: none;" src="client/img/mur-coinHG.png" />
+	 <img style="display: none;" src="client/img/no-mur.png" />
+	 <img style="display: none;" src="client/img/porte.png" />
+    
+    </head>
+    
+<body style="background-image:url(Client/img/.jpg);  background-size: cover; ">
+    <header style=" background-color: #99A79A;">
+        <div class="centercolumn">
+           Header 
+        </div><!-- .centercolumn -->
+    </header>
+
+
+    <div id="container">
+
+        <h1 id="test"></h1>
+        <div class="row vertical-align" style="padding-left:40%; ">
+
+            <div style=" padding-top:10px; width:700px; height:120px;border-width:0px 0px 3px 2px; border-style:solid dotted; background-color:#eaeaea;">
+                <div class="col-md-12 checkbox">
+                    <label><input type="checkbox" id="flic" value="flic">Option 1</label>
+                    <label><input type="checkbox" id="voleur" value="voleur">Option 2</label>
+                </div>
+
+                <div class="col-md-1">  Lobby</div>    <div style="padding-bottom:5px;" class="col-md-11"> <input id="room" /> </div>
+
+                <div class="col-md-1">  pseudo </div>   <div class="col-md-10"> <input id="pseudo" /> <button id="setpseudo">Valider</button> </div>
+            </div>
+        </div>
+
+        
+		<div class="col-md-6" style="float : right;" > 
+			<div id="chat-text" style="width:200px;height:100px;overflow-y:scroll">
+				<div>Hello!</div>
+			</div>
+			<form id="chat-form" >
+				<input id="chat-input" type="text" style="width:200px"></input>
+			</form>
+		</div> 
+		
+	<!-- 	<div class="col-md-1" style="float : left;" > 
+			Hello 
+		</div>  -->
+	
+		
+        <canvas id="moncanvas" width="500" height="500" style="border:1px solid #000000;">
+            Message pour les navigateurs ne supportant pas encore canvas.
+            <canvas>
+		
+
+    </div>
+	
+		<div class="table-responsive col-md-2" style="width : 500px;">
+				  <table class="table">
+						<thead>
+						  <tr>
+							<th>Pseudo</th>
+							<th>Eq</th>
+							<th>Dep</th>
+						  </tr>
+						</thead>
+					  <tbody id="TableauEquipeFlic">
+						 
+					</tbody>
+					
+				  </table>
+		</div>
+		
+		<div class="table-responsive col-md-2" style="width : 500px;">
+				  <table class="table">
+						<thead>
+						  <tr>
+							<th>Pseudo</th>
+							<th>Eq</th>
+							<th>Dep</th>
+						  </tr>
+						</thead>
+					  <tbody id="TableauEquipeVoleur">
+						 
+					</tbody>
+					
+				  </table>
+		</div>
+		
+		
+    <button style="" id="terminer">Terminer</button>
+	
+	
+
+</body> 
